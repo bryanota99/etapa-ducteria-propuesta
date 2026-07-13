@@ -352,6 +352,52 @@
     a{text-decoration:none;}
     @page{margin:14mm;}
   }
+
+  /* ---------- DIAGRAMA TECNICO ---------- */
+  .diagram{margin-top:28px; padding:24px 22px; background:var(--surface); border:1px solid var(--line); border-radius:8px; box-shadow:var(--shadow);}
+  .diagram-row{display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:14px;}
+  .diagram-duct{width:34px; height:34px; border-radius:50%; border:2px solid var(--blue); background:var(--blue-soft); flex:none;}
+  .diagram-duct.reserve{border:2px dashed var(--green); background:var(--green-soft);}
+  .diagram-caption{font-size:13px; color:var(--ink-muted); max-width:56ch;}
+  .diagram-legend{display:flex; gap:18px; margin-top:12px; font-size:12.5px; color:var(--ink-muted); flex-wrap:wrap;}
+  .diagram-legend span{display:flex; align-items:center; gap:7px;}
+  .diagram-legend .lg{width:14px; height:14px; border-radius:50%; border:2px solid var(--blue); background:var(--blue-soft); flex:none;}
+  .diagram-legend .lg.reserve{border:2px dashed var(--green); background:var(--green-soft);}
+
+  /* ---------- FAQ ---------- */
+  .faq{margin-top:24px; display:flex; flex-direction:column; gap:10px;}
+  .faq-item{border:1px solid var(--line); border-radius:6px; background:var(--surface); overflow:hidden;}
+  .faq-item summary{
+    cursor:pointer; padding:15px 18px; font-weight:600; font-size:14.5px;
+    list-style:none; display:flex; justify-content:space-between; align-items:center; gap:12px;
+  }
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:"+"; font-family:ui-monospace,monospace; color:var(--blue); flex:none; font-weight:400; font-size:18px;}
+  .faq-item[open] summary::after{content:"–";}
+  .faq-item .a{padding:0 18px 16px; font-size:14px; color:var(--ink-muted); max-width:64ch;}
+
+  /* ---------- CTA / CONTACTO ---------- */
+  .cta{
+    background:linear-gradient(165deg, var(--hero-bg) 0%, var(--hero-bg) 55%, var(--hero-bg-2) 100%);
+    color:var(--hero-ink); padding:56px 0;
+  }
+  .cta h2{color:var(--hero-ink);}
+  .cta p{color:var(--hero-ink); opacity:0.82;}
+  .cta-deadline{
+    display:inline-block; margin:6px 0 26px; padding:7px 14px; border-radius:20px;
+    background:rgba(255,255,255,0.08); border:1px solid var(--hero-line);
+    font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace; font-size:12.5px;
+  }
+  .cta-deadline strong{color:var(--green);}
+  .cta-grid{display:flex; flex-wrap:wrap; gap:14px; margin-top:8px;}
+  .cta-card{
+    flex:1 1 220px; background:rgba(255,255,255,0.06); border:1px solid var(--hero-line-soft);
+    border-radius:8px; padding:18px 20px; text-decoration:none; color:var(--hero-ink);
+    transition:background 0.15s ease;
+  }
+  .cta-card:hover{background:rgba(255,255,255,0.11);}
+  .cta-card .k{font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.55; margin-bottom:6px;}
+  .cta-card .v{font-size:15px; font-weight:600;}
 </style>
 
 <button class="pdf-btn no-print" onclick="window.print()" aria-label="Descargar en PDF">
@@ -417,15 +463,47 @@
       <div class="deliv-card"><div class="num">08</div><p>Presupuesto referencial de obra para construcción.</p></div>
     </div>
 
-    <details class="scope-notes">
-      <summary>Aclaraciones de alcance</summary>
-      <div class="body">
-        <p><strong>Información base:</strong> el trabajo se desarrolla sobre la información que ETAPA proporcione y sobre su catastro GIS existente. No incluye el levantamiento de la red interna de ETAPA ni la evaluación de la red de cobre o fibra óptica.</p>
-        <p><strong>Normativa:</strong> el diseño se desarrolla sobre la normativa técnica propia de ETAPA. El cumplimiento de otra normativa externa no prevista podría implicar el replanteo de algún rubro.</p>
-        <p><strong>Permisos:</strong> gestión ante entidades municipales locales. Gestión ante una entidad de nivel superior se indicaría oportunamente.</p>
-        <p><strong>Plan de migración:</strong> se entrega la propuesta, sujeta a la colaboración de ETAPA para su coordinación.</p>
+    <div class="diagram">
+      <div class="diagram-row">
+        <div class="diagram-duct"></div><div class="diagram-duct"></div><div class="diagram-duct"></div>
+        <div class="diagram-duct"></div><div class="diagram-duct"></div><div class="diagram-duct"></div>
+        <div class="diagram-duct reserve"></div>
       </div>
-    </details>
+      <p class="diagram-caption">Sección típica de canalización para zona de alta densidad: 6 ductos PVC 110mm (4") + 1 ducto de reserva, conforme a ARCOTEL 2017-0144. Así se dimensiona cada tramo del diseño.</p>
+      <div class="diagram-legend">
+        <span><span class="lg"></span>Ducto activo</span>
+        <span><span class="lg reserve"></span>Ducto de reserva</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="kicker">Preguntas frecuentes</p>
+    <h2>Lo que suele preguntarse antes de aprobar</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>¿Qué pasa si ETAPA no colabora con la información o los acercamientos necesarios?</summary>
+        <div class="a">El alcance base asume colaboración razonable de ETAPA para validar el catastro y coordinar permisos y migración. Si eso no ocurre, se comunica de inmediato y se ajustan tiempos o alcance de mutuo acuerdo — no hay sorpresas al final del proyecto.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si se necesita más alcance del que cubre esta propuesta?</summary>
+        <div class="a">La estructura de precios es adaptable. Cualquier ampliación (por ejemplo fiscalización de obra o mayor cobertura de diagnóstico) se cotiza de forma clara y aparte, sin tocar el precio ni el plazo ya acordados para este alcance base.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Cómo se garantiza que el diseño cumpla con lo que exige ETAPA?</summary>
+        <div class="a">El diseño se desarrolla directamente sobre el estándar técnico propio de ETAPA (NTI-GT-001) y la norma nacional de soterramiento (ARCOTEL 2017-0144) — no sobre supuestos genéricos.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿Qué pasa si los permisos tardan más de lo previsto?</summary>
+        <div class="a">El plazo de 8 semanas cubre el inicio y la gestión activa de los trámites. La aprobación final depende de los tiempos internos de GAD Municipal y ETAPA, fuera del control de TELUX, y se informa oportunamente si eso mueve el cierre del proyecto.</div>
+      </details>
+      <details class="faq-item">
+        <summary>¿La consultoría incluye el levantamiento de la red interna de ETAPA (cobre/fibra)?</summary>
+        <div class="a">No. El trabajo se desarrolla sobre la información que ETAPA proporcione y su catastro GIS existente, no sobre un levantamiento propio de su red interna.</div>
+      </details>
+    </div>
   </div>
 </section>
 
@@ -555,6 +633,29 @@
 
     <div class="terms">
       <div class="term"><div class="t">Vigencia de la oferta</div><div class="d">15 días calendario</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <p class="kicker" style="color:var(--hero-ink); opacity:0.7;">Siguiente paso</p>
+    <h2>¿Avanzamos?</h2>
+    <p>Esta propuesta está lista para aprobarse. Escríbenos o llámanos para coordinar la firma y el inicio del levantamiento de campo.</p>
+    <div class="cta-deadline">Oferta vigente hasta el <strong>27 de julio de 2026</strong></div>
+    <div class="cta-grid">
+      <a class="cta-card" href="mailto:telux.servicios@gmail.com?subject=Propuesta%20Ducter%C3%ADa%20ETAPA%20-%20Confirmaci%C3%B3n">
+        <div class="k">Correo</div>
+        <div class="v">telux.servicios@gmail.com</div>
+      </a>
+      <a class="cta-card" href="tel:+593992682972">
+        <div class="k">Teléfono / WhatsApp</div>
+        <div class="v">099 268 2972</div>
+      </a>
+      <div class="cta-card" style="cursor:default;">
+        <div class="k">Ubicación</div>
+        <div class="v">Cuenca, Ecuador</div>
+      </div>
     </div>
   </div>
 </section>
