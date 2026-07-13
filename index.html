@@ -398,6 +398,17 @@
   .cta-card:hover{background:rgba(255,255,255,0.11);}
   .cta-card .k{font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; opacity:0.55; margin-bottom:6px;}
   .cta-card .v{font-size:15px; font-weight:600;}
+
+  /* ---------- TRAYECTORIA ---------- */
+  .track-grid{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:24px;}
+  @media (max-width:640px){ .track-grid{grid-template-columns:1fr;} }
+  .track-card{border:1px solid var(--line); border-radius:6px; padding:16px 18px; background:var(--surface);}
+  .track-card .tt{font-weight:700; font-size:14.5px; margin-bottom:3px;}
+  .track-card .meta{
+    font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace;
+    font-size:11px; color:var(--blue); text-transform:uppercase; letter-spacing:0.04em; margin-bottom:8px;
+  }
+  .track-card p{font-size:13.5px; color:var(--ink-muted); margin:0; max-width:none;}
 </style>
 
 <button class="pdf-btn no-print" onclick="window.print()" aria-label="Descargar en PDF">
@@ -577,6 +588,36 @@
 
 <section>
   <div class="wrap">
+    <p class="kicker">Trayectoria</p>
+    <h2>Proyectos que respaldan este diseño</h2>
+    <p>TELUX es la práctica de consultoría en telecomunicaciones de Bryan Otavalo, ingeniero especializado en diseño y construcción de redes, energía y telecomunicaciones, con proyectos ejecutados para entidades públicas y privadas en el austro ecuatoriano.</p>
+    <div class="track-grid">
+      <div class="track-card">
+        <div class="tt">Complejo Multiservicios EMOV EP — San Joaquín</div>
+        <div class="meta">Consultoría · 2024</div>
+        <p>Consultoría para la construcción de la red y edificación del complejo.</p>
+      </div>
+      <div class="track-card">
+        <div class="tt">Parque de los Jóvenes — Fundación Municipal El Barranco</div>
+        <div class="meta">Proyecto urbano · 2025</div>
+        <p>Propuesta de remodelación del parque como proyecto urbano municipal.</p>
+      </div>
+      <div class="track-card">
+        <div class="tt">Villonaco III</div>
+        <div class="meta">Infraestructura de telecomunicaciones</div>
+        <p>Inspección y adaptación de infraestructura de telecomunicaciones para el transporte de la maquinaria del proyecto.</p>
+      </div>
+      <div class="track-card">
+        <div class="tt">Redes GPON — Austro ecuatoriano</div>
+        <div class="meta">Residente de obra</div>
+        <p>Residencia en la construcción de más de 6 redes GPON en la región.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
     <p class="kicker">Inversión</p>
     <h2>Qué cubre cada rubro</h2>
     <p class="muted">Costos agrupados por frente de trabajo, no por persona individual.</p>
@@ -641,7 +682,7 @@
   <div class="wrap">
     <p class="kicker" style="color:var(--hero-ink); opacity:0.7;">Siguiente paso</p>
     <h2>¿Avanzamos?</h2>
-    <p>Esta propuesta está lista para aprobarse. Escríbenos o llámanos para coordinar la firma y el inicio del levantamiento de campo.</p>
+    <p>Esta propuesta está lista para aprobarse. Escríbenos o llámanos para coordinar la firma y el inicio del levantamiento de campo. Mientras menos tiempo quede entre la aprobación y el arranque, menor el riesgo de que los costos operativos o el plazo de entrega se vean afectados.</p>
     <div class="cta-deadline">Oferta vigente hasta el <strong>27 de julio de 2026</strong></div>
     <div class="cta-grid">
       <a class="cta-card" href="mailto:telux.servicios@gmail.com?subject=Propuesta%20Ducter%C3%ADa%20ETAPA%20-%20Confirmaci%C3%B3n">
