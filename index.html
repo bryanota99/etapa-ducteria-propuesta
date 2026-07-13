@@ -1,58 +1,61 @@
-<title>Propuesta de Consultoría — Ductería ETAPA</title>
+<title>Consultoría Infraestructura de Telecomunicaciones — Centro Histórico de Cuenca</title>
 <style>
   :root{
-    --bg:#EDE8DC;
-    --surface:#FAF7EF;
-    --surface-2:#F2EDE0;
-    --ink:#1B2A38;
-    --ink-muted:#5B6B76;
-    --line:#D8D0BC;
-    --blue:#1F4E6B;
-    --blue-soft:#E4EDF1;
-    --clay:#B8532C;
-    --clay-soft:#F4E3D8;
-    --hero-bg:#111C2C;
-    --hero-ink:#F2EEE2;
-    --hero-line:rgba(242,238,226,0.28);
-    --hero-line-soft:rgba(242,238,226,0.12);
-    --good:#3E7A52;
-    --shadow: 0 1px 2px rgba(27,42,56,0.06), 0 8px 24px -12px rgba(27,42,56,0.18);
+    --bg:#EEF1F3;
+    --surface:#FFFFFF;
+    --surface-2:#F3F6F7;
+    --ink:#16223A;
+    --ink-muted:#5B6870;
+    --line:#DCE3E7;
+    --blue:#1E4693;
+    --blue-soft:#E4EAF5;
+    --teal:#1A7A96;
+    --green:#1B6B4E;
+    --green-soft:#E3F0EA;
+    --hero-bg:#10203D;
+    --hero-bg-2:#123246;
+    --hero-ink:#EEF2F5;
+    --hero-line:rgba(238,242,245,0.28);
+    --hero-line-soft:rgba(238,242,245,0.12);
+    --shadow: 0 1px 2px rgba(22,34,58,0.06), 0 8px 24px -12px rgba(22,34,58,0.18);
   }
   :root[data-theme="dark"]{
-    --bg:#0E1520;
-    --surface:#141C29;
-    --surface-2:#101724;
-    --ink:#EAE5D8;
-    --ink-muted:#93A2AC;
-    --line:rgba(234,229,216,0.14);
-    --blue:#6FA8C9;
-    --blue-soft:#182636;
-    --clay:#E2814D;
-    --clay-soft:#2A1D16;
-    --hero-bg:#0A0F19;
-    --hero-ink:#F2EEE2;
-    --hero-line:rgba(242,238,226,0.24);
-    --hero-line-soft:rgba(242,238,226,0.10);
-    --good:#6FBF8B;
+    --bg:#0B121F;
+    --surface:#121B2C;
+    --surface-2:#0E1622;
+    --ink:#E7ECEF;
+    --ink-muted:#8B98A2;
+    --line:rgba(231,236,239,0.14);
+    --blue:#5C8AD6;
+    --blue-soft:#182640;
+    --teal:#4FB4C9;
+    --green:#3FAE7C;
+    --green-soft:#122A20;
+    --hero-bg:#080D17;
+    --hero-bg-2:#0A1F26;
+    --hero-ink:#EEF2F5;
+    --hero-line:rgba(238,242,245,0.24);
+    --hero-line-soft:rgba(238,242,245,0.10);
     --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#0E1520;
-      --surface:#141C29;
-      --surface-2:#101724;
-      --ink:#EAE5D8;
-      --ink-muted:#93A2AC;
-      --line:rgba(234,229,216,0.14);
-      --blue:#6FA8C9;
-      --blue-soft:#182636;
-      --clay:#E2814D;
-      --clay-soft:#2A1D16;
-      --hero-bg:#0A0F19;
-      --hero-ink:#F2EEE2;
-      --hero-line:rgba(242,238,226,0.24);
-      --hero-line-soft:rgba(242,238,226,0.10);
-      --good:#6FBF8B;
+      --bg:#0B121F;
+      --surface:#121B2C;
+      --surface-2:#0E1622;
+      --ink:#E7ECEF;
+      --ink-muted:#8B98A2;
+      --line:rgba(231,236,239,0.14);
+      --blue:#5C8AD6;
+      --blue-soft:#182640;
+      --teal:#4FB4C9;
+      --green:#3FAE7C;
+      --green-soft:#122A20;
+      --hero-bg:#080D17;
+      --hero-bg-2:#0A1F26;
+      --hero-ink:#EEF2F5;
+      --hero-line:rgba(238,242,245,0.24);
+      --hero-line-soft:rgba(238,242,245,0.10);
       --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
     }
   }
@@ -68,7 +71,6 @@
     line-height:1.6;
     -webkit-font-smoothing:antialiased;
   }
-  .serif{font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;}
   .mono{font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace; font-variant-numeric:tabular-nums;}
 
   a{color:inherit;}
@@ -78,9 +80,9 @@
 
   /* ---------- HERO (blueprint) ---------- */
   .hero{
-    background:var(--hero-bg);
+    background:linear-gradient(165deg, var(--hero-bg) 0%, var(--hero-bg) 55%, var(--hero-bg-2) 100%);
     color:var(--hero-ink);
-    padding:72px 0 56px;
+    padding:56px 0 52px;
     position:relative;
     overflow:hidden;
     border-bottom:1px solid var(--hero-line-soft);
@@ -96,6 +98,7 @@
     pointer-events:none;
   }
   .hero-inner{position:relative; z-index:1;}
+  .brand-logo{height:50px; width:auto; display:block; margin-bottom:24px;}
   .eyebrow{
     font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace;
     font-size:12.5px;
@@ -106,17 +109,19 @@
     display:flex;
     align-items:center;
     gap:10px;
-    margin-bottom:22px;
+    margin-bottom:20px;
   }
-  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--clay);flex:none;}
+  .eyebrow .dot{width:6px;height:6px;border-radius:50%;background:var(--green);flex:none;}
   h1.title{
     font-family:Georgia,"Iowan Old Style","Palatino Linotype","Times New Roman",serif;
-    font-weight:400;
-    font-size:clamp(30px,4.4vw,44px);
-    line-height:1.12;
-    margin:0 0 14px;
+    font-weight:700;
+    font-size:clamp(21px,3.1vw,29px);
+    line-height:1.28;
+    margin:0 0 16px;
     text-wrap:balance;
-    letter-spacing:-0.01em;
+    letter-spacing:0.005em;
+    text-transform:uppercase;
+    max-width:34ch;
   }
   .subtitle{
     font-size:16.5px;
@@ -132,7 +137,7 @@
     margin-top:8px;
   }
   .hero-spec{
-    flex:1 1 150px;
+    flex:1 1 170px;
     padding:16px 20px 0 0;
     border-right:1px solid var(--hero-line-soft);
   }
@@ -142,18 +147,18 @@
     font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase;
     opacity:0.55; margin-bottom:6px;
   }
-  .hero-spec .v{font-size:15px; font-weight:600;}
+  .hero-spec .v{font-size:14.5px; font-weight:600; line-height:1.35;}
 
   .duct-motif{
-    position:absolute; right:-10px; top:36px;
-    display:grid; grid-template-columns:repeat(2,26px); gap:10px;
-    opacity:0.9;
+    position:absolute; right:22px; top:32px;
+    display:grid; grid-template-columns:repeat(2,24px); gap:9px;
+    opacity:0.85;
   }
   .duct-motif span{
-    width:26px;height:26px;border-radius:50%;
+    width:24px;height:24px;border-radius:50%;
     border:1.5px solid var(--hero-line);
   }
-  .duct-motif span.reserve{border-style:dashed; border-color:var(--clay); opacity:0.85;}
+  .duct-motif span.reserve{border-style:dashed; border-color:var(--green); opacity:0.9;}
   @media (max-width:620px){ .duct-motif{display:none;} }
 
   /* ---------- SECTIONS ---------- */
@@ -179,12 +184,6 @@
     content:""; position:absolute; left:0; top:9px; width:7px; height:7px;
     border:1.5px solid var(--blue); border-radius:50%;
   }
-
-  .opportunity{
-    margin-top:22px; padding:18px 20px; background:var(--clay-soft);
-    border-left:2px solid var(--clay); border-radius:2px;
-  }
-  .opportunity p{margin:0; max-width:60ch;}
 
   /* ---------- ENTREGABLES ---------- */
   .deliverables{
@@ -214,33 +213,33 @@
 
   /* ---------- CRONOGRAMA ---------- */
   .timeline{margin-top:28px; border:1px solid var(--line); border-radius:6px; overflow:hidden; background:var(--surface);}
-  .tl-head{display:grid; grid-template-columns:180px repeat(8,1fr); border-bottom:1px solid var(--line);}
+  .tl-head{display:grid; grid-template-columns:190px repeat(8,1fr); border-bottom:1px solid var(--line);}
   .tl-head div{
     font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace;
     font-size:10.5px; color:var(--ink-muted); text-align:center; padding:9px 4px;
     border-left:1px solid var(--line);
   }
   .tl-head div:first-child{border-left:none; text-align:left; padding-left:14px;}
-  .tl-row{display:grid; grid-template-columns:180px repeat(8,1fr); align-items:center;}
+  .tl-row{display:grid; grid-template-columns:190px repeat(8,1fr); align-items:center;}
   .tl-row + .tl-row{border-top:1px solid var(--line);}
   .tl-label{padding:12px 14px; font-size:13.5px; font-weight:600;}
-  .tl-label span{display:block; font-weight:400; font-size:12px; color:var(--ink-muted); margin-top:2px;}
+  .tl-label span{display:block; font-weight:400; font-size:11.5px; color:var(--ink-muted); margin-top:2px;}
   .tl-cells{grid-column:span 8; position:relative; height:34px; margin:8px 10px;}
   .tl-bar{
     position:absolute; top:0; height:100%; border-radius:3px;
     background:var(--blue); opacity:0.85;
   }
-  .tl-bar.parallel{background:transparent; border:1.5px dashed var(--clay); opacity:0.9;}
+  .tl-bar.parallel{background:transparent; border:1.5px dashed var(--green); opacity:0.9;}
   @media (max-width:700px){
-    .tl-head, .tl-row{grid-template-columns:112px repeat(8,1fr);}
+    .tl-head, .tl-row{grid-template-columns:118px repeat(8,1fr);}
     .tl-label{padding:10px 8px; font-size:12px;}
     .tl-head div:first-child{padding-left:8px;}
   }
 
-  .tl-legend{display:flex; gap:20px; margin-top:14px; font-size:12.5px; color:var(--ink-muted);}
+  .tl-legend{display:flex; flex-wrap:wrap; gap:20px; margin-top:14px; font-size:12.5px; color:var(--ink-muted);}
   .tl-legend .sw{display:inline-block; width:12px; height:12px; border-radius:3px; margin-right:6px; vertical-align:-1px;}
   .tl-legend .sw.b{background:var(--blue);}
-  .tl-legend .sw.p{border:1.5px dashed var(--clay); background:transparent;}
+  .tl-legend .sw.p{border:1.5px dashed var(--green); background:transparent;}
 
   /* ---------- EQUIPO ---------- */
   .team{display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:24px;}
@@ -273,15 +272,9 @@
   .invest-total .lbl{font-size:13px; color:var(--ink-muted); text-transform:uppercase; letter-spacing:0.08em; font-family:ui-monospace,monospace;}
   .invest-total .amt{
     font-family:Georgia,"Iowan Old Style","Palatino Linotype",serif;
-    font-size:42px; color:var(--clay); line-height:1; margin-top:6px;
+    font-size:42px; color:var(--green); line-height:1; margin-top:6px;
   }
   .invest-sub{font-size:13px; color:var(--ink-muted); margin-top:6px;}
-
-  .indirect-row{
-    display:flex; justify-content:space-between; padding:10px 0; border-top:1px dashed var(--line);
-    font-size:13.5px; color:var(--ink-muted);
-  }
-  .indirect-row.subtotal{color:var(--ink); font-weight:600; border-top:1px solid var(--line);}
 
   .payment-table{margin-top:34px; border-collapse:collapse; width:100%;}
   .payment-table th, .payment-table td{
@@ -296,8 +289,7 @@
   }
   .table-scroll{overflow-x:auto;}
 
-  .terms{margin-top:30px; display:grid; grid-template-columns:1fr 1fr; gap:16px;}
-  @media (max-width:640px){ .terms{grid-template-columns:1fr;} }
+  .terms{margin-top:30px; max-width:260px;}
   .term{border-left:2px solid var(--line); padding-left:14px;}
   .term .t{font-size:12px; text-transform:uppercase; letter-spacing:0.06em; color:var(--ink-muted); font-family:ui-monospace,monospace; margin-bottom:4px;}
   .term .d{font-size:14px;}
@@ -318,7 +310,7 @@
     font-family:ui-monospace,"SF Mono",Menlo,"Courier New",monospace;
     font-size:9.5px; text-transform:uppercase; letter-spacing:0.08em; color:var(--ink-muted); margin-bottom:3px;
   }
-  .titleblock .v{font-size:12.5px; font-weight:600;}
+  .titleblock .v{font-size:12px; font-weight:600; line-height:1.3;}
   .fineprint{margin-top:16px; font-size:11.5px; color:var(--ink-muted);}
 
   ::selection{background:var(--blue); color:var(--hero-ink);}
@@ -331,14 +323,15 @@
       <span></span><span></span>
       <span></span><span class="reserve"></span>
     </div>
-    <div class="eyebrow"><span class="dot"></span>Propuesta de consultoría · TELUX</div>
-    <h1 class="title">Diseño de ductería, cámaras y pozos de telecomunicaciones<br>y plan de migración de red</h1>
-    <p class="subtitle">Centro histórico de Cuenca — Supermanzana 1. Presentado por TELUX.</p>
+    <img class="brand-logo" alt="TELUX" src="data:image/png;base64,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" />
+    <div class="eyebrow"><span class="dot"></span>Propuesta de consultoría</div>
+    <h1 class="title">Consultoría para la construcción de la nueva infraestructura de telecomunicaciones en el centro histórico de Cuenca</h1>
+    <p class="subtitle">Diseño de ductería, cámaras y pozos de telecomunicaciones y plan de migración de red — Supermanzana 1.</p>
     <div class="hero-specs">
-      <div class="hero-spec"><div class="k">Cliente final</div><div class="v">ETAPA EP</div></div>
+      <div class="hero-spec"><div class="k">Cliente final</div><div class="v">Equipo Consultor Consorcio FEUT-LEKU-AOC</div></div>
       <div class="hero-spec"><div class="k">Ámbito</div><div class="v">Supermanzana 1, 38 tramos</div></div>
+      <div class="hero-spec"><div class="k">Estado</div><div class="v">Factibilidad</div></div>
       <div class="hero-spec"><div class="k">Plazo</div><div class="v">8 semanas</div></div>
-      <div class="hero-spec"><div class="k">Inversión</div><div class="v">USD $22,000</div></div>
     </div>
   </div>
 </div>
@@ -354,9 +347,7 @@
       <li>Ductería saturada, sin capacidad de reserva para nuevos cables o servicios.</li>
       <li>Pozos existentes sin interconectar.</li>
     </ul>
-    <div class="opportunity">
-      <p><strong>Ventana de oportunidad:</strong> el proyecto municipal "Calles Completas" (fase de Factibilidad) contempla la repavimentación de las calles de la Supermanzana 1 — los mismos tramos donde debe renovarse la ductería de ETAPA. Intervenir antes de esa repavimentación evita abrir dos veces la misma vía.</p>
-    </div>
+    <p>Se aprovechará la intervención del proyecto municipal "Calles Completas" —que contempla la repavimentación de las calles de la Supermanzana 1— para ejecutar en paralelo la readecuación de la infraestructura de ETAPA en la misma zona.</p>
   </div>
 </section>
 
@@ -378,7 +369,7 @@
       <div class="deliv-card"><div class="num">03</div><p>Diseño y dimensionamiento de cámaras y pozos de registro, con reservas para la red GPON.</p></div>
       <div class="deliv-card"><div class="num">04</div><p>Gestión de permisos de construcción ante entidades municipales locales.</p></div>
       <div class="deliv-card"><div class="num">05</div><p>Propuesta de plan de migración por fases de la red GPON existente hacia la nueva infraestructura.</p></div>
-      <div class="deliv-card"><div class="num">06</div><p>Ideas generales de desmantelamiento o reutilización de la infraestructura antigua.</p></div>
+      <div class="deliv-card"><div class="num">06</div><p>Recomendaciones de desmantelamiento o reutilización de la infraestructura antigua.</p></div>
       <div class="deliv-card"><div class="num">07</div><p>Planos definitivos, en formato compatible con el SIG de ETAPA.</p></div>
       <div class="deliv-card"><div class="num">08</div><p>Presupuesto referencial de obra para construcción.</p></div>
     </div>
@@ -406,29 +397,25 @@
       </div>
 
       <div class="tl-row">
-        <div class="tl-label">Fase 1<span>Validación de catastro</span></div>
+        <div class="tl-label">Levantamiento<span>Validación de catastro en campo</span></div>
         <div class="tl-cells"><div class="tl-bar" style="left:0%;width:25%;"></div></div>
       </div>
       <div class="tl-row">
-        <div class="tl-label">Fase 2<span>Diseño preliminar</span></div>
-        <div class="tl-cells"><div class="tl-bar" style="left:25%;width:25%;"></div></div>
+        <div class="tl-label">Diseño de ingeniería<span>Arranca desde la primera semana</span></div>
+        <div class="tl-cells"><div class="tl-bar" style="left:0%;width:87.5%;"></div></div>
       </div>
       <div class="tl-row">
-        <div class="tl-label">Fase 3<span>Gestión de permisos</span></div>
-        <div class="tl-cells"><div class="tl-bar parallel" style="left:25%;width:62.5%;"></div></div>
+        <div class="tl-label">Gestión de permisos<span>Primer acercamiento con ETAPA a la brevedad</span></div>
+        <div class="tl-cells"><div class="tl-bar parallel" style="left:0%;width:87.5%;"></div></div>
       </div>
       <div class="tl-row">
-        <div class="tl-label">Fase 4<span>Diseño definitivo</span></div>
-        <div class="tl-cells"><div class="tl-bar" style="left:50%;width:37.5%;"></div></div>
-      </div>
-      <div class="tl-row">
-        <div class="tl-label">Fase 5<span>Entrega y cierre</span></div>
+        <div class="tl-label">Entrega y cierre<span>Sustentación final</span></div>
         <div class="tl-cells"><div class="tl-bar" style="left:87.5%;width:12.5%;"></div></div>
       </div>
     </div>
     <div class="tl-legend">
-      <span><span class="sw b"></span>Fase activa</span>
-      <span><span class="sw p"></span>Fase 3 corre en paralelo con Fases 2 y 4</span>
+      <span><span class="sw b"></span>Trabajo activo</span>
+      <span><span class="sw p"></span>Corre en paralelo desde el inicio</span>
     </div>
   </div>
 </section>
@@ -436,32 +423,32 @@
 <section>
   <div class="wrap">
     <p class="kicker">Equipo</p>
-    <h2>Cinco roles, un solo interlocutor</h2>
+    <h2>El equipo que va a ejecutar el proyecto</h2>
     <div class="team">
       <div class="team-card">
         <div class="role">Ingeniero líder en Telecomunicaciones</div>
-        <div class="phase">Fases 1–5 · todo el proyecto</div>
-        <p>Diseño de red, coordinación técnica, interlocución con la empresa contratante y ETAPA.</p>
+        <div class="phase">Todo el proyecto</div>
+        <p>Coordinación general, diseño de la red de ductería y GPON, dimensionamiento de cámaras y pozos, elaboración de la propuesta de plan de migración, presupuesto referencial de obra, interlocución con la empresa contratante y ETAPA, y revisión de todos los entregables.</p>
       </div>
       <div class="team-card">
         <div class="role">Técnico de levantamiento</div>
-        <div class="phase">Fase 1</div>
-        <p>Validación en campo del catastro GIS de ETAPA e inspección visual dirigida a puntos con problemas reportados.</p>
+        <div class="phase">Arranque del proyecto</div>
+        <p>Validación en campo del catastro de ETAPA, inspección dirigida a los puntos con problemas reportados y catastro de interferencias con otras redes de servicios públicos.</p>
       </div>
       <div class="team-card">
         <div class="role">Asistente de campo</div>
         <div class="phase">Apoyo transversal</div>
-        <p>Apoyo al levantamiento, registro fotográfico y documentación de campo.</p>
+        <p>Apoyo al levantamiento y registro fotográfico y documental durante todo el proyecto.</p>
       </div>
       <div class="team-card">
         <div class="role">Dibujante / Diseñador CAD-GIS</div>
-        <div class="phase">Fases 2 y 4</div>
-        <p>Planos de diseño preliminar y definitivo, georreferenciados en el SIG de ETAPA.</p>
+        <div class="phase">Todo el proyecto</div>
+        <p>Planos de diseño preliminar y definitivo, georreferenciación en el SIG de ETAPA, y estructuración de toda la información y entregables del proyecto.</p>
       </div>
       <div class="team-card">
         <div class="role">Especialista en permisos</div>
-        <div class="phase">Fase 3 · paralelo</div>
-        <p>Gestión de trámites ante GAD Municipal de Cuenca y ETAPA.</p>
+        <div class="phase">Desde el inicio</div>
+        <p>Primeros acercamientos y gestión de trámites ante GAD Municipal de Cuenca y ETAPA, y preparación de la documentación técnica requerida.</p>
       </div>
     </div>
   </div>
@@ -476,40 +463,35 @@
     <div class="invest-cat">
       <div class="cat-row">
         <div class="cat-name">Dirección y coordinación del proyecto</div>
-        <div class="cat-amount">$4,830</div>
-        <div class="cat-desc">Diseño de la red, coordinación técnica del equipo, interlocución permanente con la empresa contratante y ETAPA, y elaboración de la propuesta de plan de migración durante las 8 semanas.</div>
+        <div class="cat-amount">$6,200</div>
+        <div class="cat-desc">Diseño de la red, coordinación del equipo e interlocución permanente con la empresa contratante y ETAPA durante las 8 semanas del proyecto.</div>
         <div class="cat-bar-track"><div class="cat-bar-fill" style="width:30%"></div></div>
       </div>
       <div class="cat-row">
         <div class="cat-name">Levantamiento y diagnóstico de campo</div>
-        <div class="cat-amount">$6,348</div>
-        <div class="cat-desc">Validación en campo del catastro GIS que ETAPA ya tiene registrado, más inspección visual dirigida a los puntos con problemas de saturación e inundación reportados.</div>
+        <div class="cat-amount">$8,100</div>
+        <div class="cat-desc">Validación en campo del catastro que ETAPA ya tiene registrado, más inspección dirigida a los puntos con problemas de saturación e inundación reportados.</div>
         <div class="cat-bar-track"><div class="cat-bar-fill" style="width:39%"></div></div>
       </div>
       <div class="cat-row">
         <div class="cat-name">Documentación, diseño y permisos</div>
-        <div class="cat-amount">$4,140</div>
+        <div class="cat-amount">$5,300</div>
         <div class="cat-desc">Planos definitivos compatibles con el SIG de ETAPA y gestión de la documentación técnica ante GAD Municipal y ETAPA para los permisos de construcción.</div>
         <div class="cat-bar-track"><div class="cat-bar-fill" style="width:25%"></div></div>
       </div>
       <div class="cat-row">
         <div class="cat-name">Gestión operativa</div>
-        <div class="cat-amount">$1,035</div>
+        <div class="cat-amount">$1,400</div>
         <div class="cat-desc">Movilización en campo, licencias de software CAD-GIS y tasas administrativas de los trámites municipales.</div>
-        <div class="cat-bar-track"><div class="cat-bar-fill" style="width:6%"></div></div>
+        <div class="cat-bar-track"><div class="cat-bar-fill" style="width:7%"></div></div>
       </div>
-    </div>
-
-    <div style="margin-top:26px;">
-      <div class="indirect-row subtotal"><span>Subtotal costos directos</span><span class="mono">$16,353</span></div>
-      <div class="indirect-row"><span>Costos indirectos y margen de gestión TELUX</span><span class="mono">$5,647</span></div>
     </div>
 
     <div class="invest-total">
       <div>
         <div class="lbl">Inversión total</div>
-        <div class="amt mono">$22,000</div>
-        <div class="invest-sub">USD, no incluye IVA · plazo 8 semanas</div>
+        <div class="amt mono">$21,000</div>
+        <div class="invest-sub">Plazo: 8 semanas</div>
       </div>
     </div>
 
@@ -517,16 +499,15 @@
       <table class="payment-table">
         <thead><tr><th>Hito</th><th>%</th><th>Monto</th></tr></thead>
         <tbody>
-          <tr><td>Anticipo, contra firma del contrato</td><td>30%</td><td class="amt">$6,600</td></tr>
-          <tr><td>Entrega de diagnóstico y diseño preliminar</td><td>40%</td><td class="amt">$8,800</td></tr>
-          <tr><td>Entrega final: diseño definitivo y presupuesto</td><td>30%</td><td class="amt">$6,600</td></tr>
+          <tr><td>Anticipo, contra firma del contrato</td><td>30%</td><td class="amt">$6,300</td></tr>
+          <tr><td>Entrega de diagnóstico y diseño preliminar</td><td>40%</td><td class="amt">$8,400</td></tr>
+          <tr><td>Entrega final: diseño definitivo y presupuesto</td><td>30%</td><td class="amt">$6,300</td></tr>
         </tbody>
       </table>
     </div>
 
     <div class="terms">
       <div class="term"><div class="t">Vigencia de la oferta</div><div class="d">15 días calendario</div></div>
-      <div class="term"><div class="t">Moneda</div><div class="d">Dólares de EE.UU. (USD), no incluye IVA</div></div>
     </div>
   </div>
 </section>
@@ -534,8 +515,8 @@
 <footer>
   <div class="wrap">
     <div class="titleblock">
-      <div><div class="k">Proyecto</div><div class="v">Ductería ETAPA — Centro Histórico</div></div>
-      <div><div class="k">Cliente final</div><div class="v">ETAPA EP</div></div>
+      <div><div class="k">Proyecto</div><div class="v">Infraestructura de Telecomunicaciones — Centro Histórico</div></div>
+      <div><div class="k">Cliente final</div><div class="v">Equipo Consultor Consorcio FEUT-LEKU-AOC</div></div>
       <div><div class="k">Documento</div><div class="v">Propuesta de consultoría</div></div>
       <div><div class="k">Elaborado por</div><div class="v">TELUX</div></div>
     </div>
